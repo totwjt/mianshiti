@@ -1,0 +1,29 @@
+<!-- tab -->
+<view class="index">
+    <view class="con">
+        <van-tabs type="card" color="#6468EF" active="{{active}}" bind:change="change">
+            <van-tab title="项目详情" />
+            <van-tab title="跟进记录（{{count}}条）" />
+        </van-tabs>
+
+        <view class="info" style="padding-top:30rpx;text-align:center" wx:if="{{active===0}}">
+            项目详情
+        </view>
+
+        <scroll-view scroll-y="{{true}}" refresher-enabled="{{true}}" refresher-triggered="{{loading}}" bindrefresherrefresh="onRefresh" bindscrolltolower="onLoadMore" class="info" wx:if="{{active===1}}">
+            <view class="card" wx:for="{{list}}" wx:key="index">
+                <view class="title">{{item.title}}</view>
+                <view class="detail">{{item.detail}}</view>
+                <view class="date">{{item.date}}</view>
+            </view>
+            <view style="height: 20vh;"></view>
+        </scroll-view>
+    </view>
+
+</view>
+
+<view class="pop-layout" catchtap="goto">
+
+    <van-icon name="add-o" size="40px" color="#6468EF" />
+
+</view>

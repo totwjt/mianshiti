@@ -1,0 +1,55 @@
+page {
+  background-color: #f7f8fa;
+}
+.submit {
+  box-sizing: border-box;
+  width: 100vw;
+  padding: 30rpx;
+
+  .title {
+    margin: 40rpx 0 20rpx 0;
+    color: gray;
+    font-size: 30rpx;
+  }
+
+  .input {
+    // color: ;
+  }
+
+  .textarea {
+    background-color: #fff;
+    padding: 30rpx;
+    width: calc(100vw - 120rpx);
+  }
+}
+
+.btns {
+  box-sizing: border-box;
+  width: 100vw;
+  position: fixed;
+  bottom: 10rpx;
+  left: 0;
+  padding-bottom: constant(env(safe-area-inset-bottom));
+  padding-bottom: calc(env(safe-area-inset-bottom));
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .btn {
+    height: 80rpx;
+    line-height: 80rpx;
+    width: 100%;
+    text-align: center;
+    border-radius: 8rpx;
+    margin: 0 20rpx;
+  }
+  .sub {
+    background-color: #6468ef;
+    color: #fff;
+  }
+  .cancel {
+    border: 1px solid rgb(212, 212, 212);
+    background-color: #fff;
+  }
+}

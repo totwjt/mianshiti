@@ -1,0 +1,33 @@
+<!--pages/info/info.wxml-->
+
+<!-- <van-nav-bar title="跟进详情 - DevOpsGPT" left-text="" left-arrow bind:click-left="onClickLeft" bind:click-right="onClickRight">
+    <van-icon name="right" slot="right" />
+</van-nav-bar> -->
+
+<view class="submit">
+    <view class="title">沟通主题</view>
+    <van-cell-group>
+        <van-field model:value="{{ title }}" placeholder="沟通主题" border="{{ false }}" bind:change="onChange" />
+    </van-cell-group>
+
+    <view class="title">沟通详情</view>
+    <textarea class="textarea" model:value="{{detail}}" placeholder="请输入" maxlength="150"></textarea>
+
+
+    <view class="title">下次沟通时间</view>
+    <van-cell title="{{ nextTime?nextTime:'选择下次沟通时间' }}" is-link bind:click="onDisplay" />
+    <van-calendar show="{{ show }}" show-confirm="{{ false }}" bind:confirm="onConfirm" color="#6468EF" />
+
+
+    <view class="title">下次沟通内容</view>
+    <textarea class="textarea" model:value="{{nextDetail}}" placeholder="请输入" maxlength="150"></textarea>
+
+    <view style="height:120rpx"></view>
+
+</view>
+
+<cover-view class="btns">
+    <cover-view class="btn sub" catch:tap="submit">保存
+    </cover-view>
+    <cover-view class="btn cancel" catch:tap="cancel">取消</cover-view>
+</cover-view>

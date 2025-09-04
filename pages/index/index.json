@@ -1,0 +1,11 @@
+{
+    "navigationBarBackgroundColor": "#6468EF",
+    "navigationBarTitleText": "跟进详情 - DevOpsGPT",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "van-tab": "@vant/weapp/tab/index",
+        "van-tabs": "@vant/weapp/tabs/index",
+
+        "van-icon": "@vant/weapp/icon/index"
+    }
+}
